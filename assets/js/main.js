@@ -5,10 +5,6 @@
 * License: https://bootstrapmade.com/license/
 */
 
-var d = new Date();
-    var c= d.getFullYear()-2000;
-    document.getElementById('age').textContent=c;
-
 (function() {
   "use strict";
 
