@@ -114,14 +114,14 @@ software solutions.
                 <ul style="font-size: 22px;">
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>XX XXX XXX</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 xxxxxxxxx</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Pune,Maharashtra</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span id='location'>Maharashtra,India</span></li>
                 </ul>
               </div>
               <div class="col-lg-7">
                 <ul style="font-size:22px;">
                   <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id='age'></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor's in Computer
-                      Science</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master's in Computer
+                      Applications</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>vruturaj633@gmail.com</span>
                   </li>
 
@@ -614,6 +614,24 @@ software solutions.
     var d = new Date();
     var c= d.getFullYear()-2000;
     document.getElementById('age').textContent=c;
+
+     const locationElement = document.getElementById('location');
+
+    // Check if Geolocation API is available
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          locationElement.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        },
+        (error) => {
+          locationElement.textContent = `Error: ${error.message}`;
+        }
+      );
+    } else {
+      locationElement.textContent = "Geolocation is not supported by your browser.";
+    }
   </script>
 
 </html>
