@@ -566,11 +566,19 @@
         db.ref("siteData").once("value").then(snapshot => {
             const data = snapshot.val();
 
-            // Set meta data
-            document.title = data.meta.title;
-            document.getElementById("site-title").textContent = data.meta.title;
-            document.getElementById("meta-description").content = data.meta.description;
-            document.getElementById("meta-keywords").content = data.meta.keywords;
+         
+            if (data.meta?.title) document.title = data.meta.title;
+
+const descTag = document.querySelector('meta[name="description"]');
+if (descTag && data.meta?.description) {
+    descTag.setAttribute('content', data.meta.description);
+}
+
+const keywordsTag = document.querySelector('meta[name="keywords"]');
+if (keywordsTag && data.meta?.keywords) {
+    keywordsTag.setAttribute('content', data.meta.keywords);
+}
+
 
             // Profile
             document.querySelector(".profile h1 a").textContent = data.profile.name;
@@ -667,41 +675,8 @@
     //location>>>>
     const locationElement = document.getElementById('location');
 
-    // Function to fetch location name using reverse geocoding
-    function getLocationName(latitude, longitude) {
-        const apiKey = "YOUR_GOOGLE_API_KEY"; // Replace with your API key
-        const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
-
-        fetch(url)
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.status === "OK") {
-                    const address = data.results[0].formatted_address;
-                    locationElement.textContent = address;
-                } else {
-                    locationElement.textContent = "Maharashtra,India.";
-                }
-            })
-            .catch((error) => {
-                locationElement.textContent = "Error fetching location: " + error.message;
-            });
-    }
-
-    // Check if Geolocation API is available
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const latitude = position.coords.latitude;
-                const longitude = position.coords.longitude;
-                getLocationName(latitude, longitude);
-            },
-            (error) => {
-                locationElement.textContent = `Error: ${error.message}`;
-            }
-        );
-    } else {
-        locationElement.textContent = "Geolocation is not supported by your browser.";
-    }
+   
+  
 </script>
 
 </html>
