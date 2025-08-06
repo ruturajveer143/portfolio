@@ -2,681 +2,187 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Ruturaj Veer | QA Automation Engineer | Selenium, Java, REST Assured</title>
-    <meta name="description"
-        content="Ruturaj Veer - QA Automation Engineer with strong experience in Java, Selenium, REST Assured, and test automation.">
-    <meta name="keywords" content="Ruturaj Veer, QA Engineer, Java, Selenium, REST Assured, Maven, Jenkins, Git, HTML, CSS, Portfolio,Ruturaj Veer,ruturaj gaikwad, popular, pune, 
-            India,developer, software,Tester, SDet, portfolio, IT student, web development, projects, skills">
-    <meta name="robots" content="index, follow">
-
-
-    <!-- ATS Friendly Keywords Section -->
-    <section style="display: none;">
-        Java, Selenium, TestNG, REST Assured, Postman, Jenkins, Maven, Git, GitHub, Playwright, Manual Testing,
-        Automation Testing, SQL, HTML, CSS, Bootstrap, JavaScript, Agile, API Testing, WebDriver
-    </section>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9854991424366529"
-        crossorigin="anonymous"></script>
-    <!-- Favicons -->
-    <link href="assets/img/icons8-r-50.png" rel="icon">
-   
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title></title>
+  <meta name="description" />
+  <meta name="keywords" />
+  <meta name="robots" content="index, follow" />
+  <link href="assets/img/icons8-r-50.png" rel="icon" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Poppins" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
+  <main class="container mt-5" id="portfolioContent">
+    <h1>Loading portfolio...</h1>
+  </main>
 
-    <!-- ======= Mobile nav toggle button ======= -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="d-flex flex-column">
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDVXI5VvxM3bhRV9ChMBANtH0EtjGkBZMI",
+      authDomain: "ruturaj-veer.firebaseapp.com",
+      databaseURL: "https://ruturaj-veer-default-rtdb.firebaseio.com",
+      projectId: "ruturaj-veer",
+      storageBucket: "ruturaj-veer.appspot.com",
+      messagingSenderId: "168086635691",
+      appId: "1:168086635691:web:eedec947d385a3b53ae3ee",
+    };
 
-            <div class="profile">
-                <img src="assets/img/Snapchat-1639444201-fotor-2023090212464.png" alt=""
-                    class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="index.html">Ruturaj Veer</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://twitter.com/ruturaj_143_" class="twitter" target="_blank"><i
-                            class="bx bxl-twitter"></i></a>
-                    <a href="https://www.facebook.com/ruturaj.veer.37" target="_blank" class="facebook"><i
-                            class="bx bxl-facebook"></i></a>
-                    <a href="https://www.instagram.com/ruturaj.143/" target="_blank" class="instagram"><i
-                            class="bx bxl-instagram"></i></a>
-                    <a href="https://github.com/ruturajveer143" target="_blank" class="google-plus"><i
-                            class="bi bi-github" style="color: red;"></i></a>
-                    <a href="https://www.linkedin.com/in/ruturaj-veer-b6858a1a7/" target="_blank" class="linkedin"><i
-                            class="bx bxl-linkedin"></i></a>
-                </div>
-            </div>
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
 
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
-                            <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
-                    </li>
-                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
-                            <span>Career Journey </span></a></li>
-                     <li><a href="#contact" class="nav-link scrollto"><i class='fab fa-nimblr' style='color:red'></i>
-                            <span>Blogs</span></a></li>
-                    <li><a href="#certificates" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-                            <span>Certificates</span></a></li>
-                    <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-server"></i>
-                            <span>Projects</span></a></li>
-                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
-                            <span>Contact</span></a></li>
-                </ul>
-            </nav><!-- .nav-menu -->
-        </div>
-    </header><!-- End Header -->
+    db.ref("siteData").once("value").then((snapshot) => {
+      const data = snapshot.val();
 
-    <!-- ======= Hero Section =portfolio====== -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Ruturaj Veer</h1>
-            <p>I'm <span class="typed" data-typed-items="Programmer, Test Engineer (SDET),Developer"></span></p>
-        </div>
-    </section><!-- End Hero -->
+      // Meta
+      document.title = data.meta?.title || "";
+      document.querySelector('meta[name="description"]').setAttribute("content", data.meta?.description || "");
+      document.querySelector('meta[name="keywords"]').setAttribute("content", data.meta?.keywords || "");
 
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img src="assets/img/Snapchat-1639444201.jpg" height="auto" width="400px" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <p style="font-size: 16px; font-weight: 400;" class="fst-italic">
-                            <b>Summary:</b><br>
-                            Motivated MCA graduate with experience in Manual and Automation
-                            Testing.
-                            Skilled in writing robust automation scripts using Selenium WebDriver with Java, integrating
-                            frameworks with Maven, and executing test cases with TestNG.
-                            Experienced in REST API testing using REST Assured and tools like Postman.
-                            Comfortable working with Git, GitHub, Jenkins, and Agile methodologies.
-                            Also familiar with HTML, CSS, JavaScript, and responsive UI testing.
-                            Dedicated to delivering high-quality software solutions with a focus on reliability and
-                            performance.
-                        </p>
-
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <ul style="font-size: 16px;">
-                                    <li><i class="bi bi-chevron-right"></i> <strong>DOB:</strong> <span>25 FEB
-                                            2000</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id='age'></span>
-                                    </li>
-
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span
-                                            id='location'>Maharashtra, India</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-7">
-                                <ul style="font-size: 14px;">
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Nationality:</strong>
-                                        <span>Indian</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Graduation:</strong>
-                                        <span>Post-Graduate</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Hobbies:</strong> <span>Trekking |
-                                            Swimming | Playing Chess</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <p></p>
-                    </div>
-                </div>
-
-            </div>
+      // Profile + Hero Section
+      const profile = data.profile;
+      const social = data.links?.social || {};
+      const heroHTML = `
+        <section id="hero" class="text-center p-4 bg-light rounded shadow mb-5">
+          <img src="assets/img/Snapchat-1639444201-fotor-2023090212464.png" class="rounded-circle mb-3" width="150" />
+          <h1>${profile.name}</h1>
+          <p><strong>${profile.title}</strong></p>
+          <div class="social-links">
+            <a href="${social.twitter}" target="_blank"><i class="bx bxl-twitter"></i></a>
+            <a href="${social.facebook}" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="${social.instagram}" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="${social.github}" target="_blank"><i class="bx bxl-github"></i></a>
+            <a href="${social.linkedin}" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          </div>
         </section>
-        <!-- End About Section -->
+      `;
 
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Skills</h2>
-                </div>
-
-                <div class="row skills-content">
-
-                    <div class="col-lg-6" data-aos="fade-up">
-
-                        <div class="progress">
-                            <span class="skill">Java <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Selenium<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Manual Testing <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="progress">
-                            <span class="skill">SQL <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="progress">
-                            <span class="skill">REST Assured | Postman <i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-                        <div class="progress">
-                            <span class="skill">HTML | CSS | Bootstrap <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">65%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="progress">
-                            <span class="skill">Playwright <i class="val">50%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Git & GitHub | Jenkins (CI/CD)<i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Maven <i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+      // About Section
+      const dob = parseInt(profile.dob.split("-")[0]);
+      const age = new Date().getFullYear() - dob;
+      const aboutHTML = `
+        <section class="mb-5">
+          <h2>About Me</h2>
+          <p><strong>Location:</strong> ${profile.location}</p>
+          <p><strong>Date of Birth:</strong> ${profile.dob}</p>
+          <p><strong>Age:</strong> ${age}</p>
+          <p><strong>Nationality:</strong> ${profile.nationality}</p>
+          <p><strong>Bio:</strong> ${profile.bio}</p>
         </section>
-        <!-- End Skills Section -->
+      `;
 
-
-        <!-- ======= Education Section ======= -->
-        <section id="resume" class="resume">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Career Journey</h2>
+      // Skills
+      const skillsHTML = `
+        <section class="mb-5">
+          <h2>Skills</h2>
+          <div class="row">
+            ${data.skills.map(skill => `
+              <div class="col-md-6">
+                <p>${skill.name}</p>
+                <div class="progress mb-3">
+                  <div class="progress-bar" role="progressbar" style="width: ${skill.level}%" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">${skill.level}%</div>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Masters In Computer Application</h4>
-                            <h5>Nov 2022 - June 2024</h5>
-                            <p><em>Asm's IBMR Pune</em></p>
-                            <p><em>Marks 65.29%</em></p>
-                        </div>
-                        <br>
-                        <div class="resume-item">
-                            <h4>BACHELOR'S IN COMPUTER SCIENCE</h4>
-                            <h5>June 2019 - Aug 2022</h5>
-                            <p><em>Haribhai V. Desai College, Pune</em></p>
-                            <p><em>Marks 73.86%</em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4> Test Engineer (SDET)</h4>
-                            <h5> Nov 2022 - July 2025</h5>
-                            <p><em>Pune, Maharashtra</em></p>
-                            <ul>
-                                <!-- <li>-</li> -->
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Resume Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="certificates" class="portfolio section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Certificates</h2>
-                </div>
-
-
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-code">Code</li>
-                            <li data-filter=".filter-web">Web</li>
-                            <li data-filter=".filter-other">Other</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-code">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/Full stack java.jpg" class="img-fluid"
-                                alt="Full Stack Java">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/Full stack java.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-other">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/1.jpg" class="img-fluid" alt="google-digital-marketing">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/1.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/4.jpg" class="img-fluid" alt="html-course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/4.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-code">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/5.jpg" class="img-fluid" alt="sql-course">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/5.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/7.jpg" class="img-fluid" alt="responsive-web-design">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/7.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-other">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/8.jpg" class="img-fluid" alt="visual-presentation">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/8.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/certificate/9.jpg" class="img-fluid" alt="webiste-making">
-                            <div class="portfolio-links">
-                                <a href="assets/img/certificate/9.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                <a href="https://ruturajveer143.github.io/portfolio/" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Portfolio Section -->
-
-
-
-        <!-- ======= Services Section ======= -->
-        <section id="projects" class="services">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Projects</h2>
-                </div>
-
-                <div class="row">
-
-                    <!-- Internet Banking Project -->
-                    <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><i class="bi bi-briefcase"></i></div>
-                        <h4 class="title"><a href="#">Internet Banking Application</a></h4>
-                        <p class="description">
-                            Worked as QA Engineer on a real-time Internet Banking system.<br>
-                            ✔ Automated regression and smoke test cases using Selenium WebDriver with Java.<br>
-                            ✔ Implemented Maven for project build and TestNG for test management.<br>
-                            ✔ Involved in API testing using REST Assured for account-related services.<br>
-                            ✔ Validated transaction history, fund transfer, OTP handling, and error handling scenarios.
-                        </p>
-                    </div>
-
-                    <!-- Insurance Domain Project -->
-                    <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                        <h4 class="title"><a href="#">Insurance Domain Application</a></h4>
-                        <p class="description">
-                            QA role in web-based Insurance claim and policy management system.<br>
-                            ✔ Created Selenium test scripts for premium calculation and claim processing.<br>
-                            ✔ Performed cross-browser testing and API automation for policy issuance APIs.<br>
-                            ✔ Participated in Agile ceremonies and daily defect triage.<br>
-                            ✔ Tools used: Selenium, REST Assured, Jenkins, MySQL.
-                        </p>
-                    </div>
-
-                    <!-- Blood Donation Registration (College) -->
-                    <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><i class="bi bi-briefcase"></i></div>
-                        <h4 class="title"><a href="https://github.com/ruturajveer143?tab=repositories">Blood Donation
-                                Reg. (College)</a></h4>
-                        <p class="description">
-                            Developed during college as a web-based system to streamline blood donation processes.<br>
-                            ✔ Donor registration with hospital selection and date/time scheduling.<br>
-                            ✔ Post-donation certificate generation feature.<br>
-                            ✔ Simple UI with validation and MySQL DB integration.<br>
-                            ✔ Built using HTML, CSS, JS, PHP, and MySQL.
-                        </p>
-                    </div>
-
-                    <!-- Enterprise Resource Management -->
-                    <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><i class="bi bi-bar-chart"></i></div>
-                        <h4 class="title"><a href="https://github.com/ruturajveer143/">Enterprise Resource
-                                Management</a></h4>
-                        <p class="description">
-                            Built an enterprise system for managing inventory, employees, and billing.<br>
-                            ✔ End-to-end application with invoice generation, GST, and product reports.<br>
-                            ✔ Real-time PDF bill generation using JavaScript.<br>
-                            ✔ Employed testing using Selenium + TestNG.<br>
-                            ✔ Technologies: HTML, JS, Java, MySQL, PDF Generator.
-                        </p>
-                    </div>
-
-
-
-                </div>
-
-            </div>
+              </div>
+            `).join('')}
+          </div>
         </section>
+      `;
 
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                </div>
-                <div class="row" data-aos="fade-in"
-                    style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                    <div style="flex: 1 1 400px; min-width: 300px;">
-                        <iframe src="https://ruturajveer143.github.io/profile/" width="100%" height="400"
-                            style="border:1px solid black;" frameborder="0"></iframe>
-                    </div>
-                    <div style="flex: 1 1 400px; min-width: 300px;">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.03447396975!2d73.86296739999999!3d18.52461645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1693641446808!5m2!1sen!2sin"
-                            width="100%" height="400" style="border:1px solid black;" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-
-                        </iframe>
-                    </div>
-                </div>
+      // Education
+      const educationHTML = `
+        <section class="mb-5">
+          <h2>Education</h2>
+          ${data.education.map(edu => `
+            <div>
+              <h5>${edu.degree}</h5>
+              <p><strong>${edu.institute}</strong></p>
+              <p>${edu.duration}</p>
+              <p>Marks: ${edu.marks}</p>
+              <hr />
             </div>
+          `).join('')}
         </section>
+      `;
 
-    </main><!-- End #main -->
+      // Experience
+      const exp = data.experience;
+      const experienceHTML = `
+        <section class="mb-5">
+          <h2>Experience</h2>
+          <h5>${exp.position}</h5>
+          <p><strong>${exp.location}</strong></p>
+          <p>${exp.duration}</p>
+        </section>
+      `;
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>@Ruturaj</span></strong>
+      // Certificates
+      const certHTML = `
+        <section class="mb-5">
+          <h2>Certificates</h2>
+          <div class="row">
+            ${data.certificates.map(cert => `
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <img src="${cert.img}" class="card-img-top" alt="${cert.title}">
+                  <div class="card-body">
+                    <h6 class="card-title">${cert.title}</h6>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </section>
+      `;
+
+      // Projects
+      const projectHTML = `
+        <section class="mb-5">
+          <h2>Projects</h2>
+          ${data.projects.map(project => `
+            <div class="mb-4">
+              <h5>${project.title}</h5>
+              <p>${project.description.join("<br>")}</p>
+              <hr />
             </div>
-            <div class="credits">
-                Designed by <a href="index.html">Ruturaj Veer</a>
-            </div>
-        </div>
-    </footer><!-- End  Footer -->
+          `).join('')}
+        </section>
+      `;
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+      // Inject all into page
+      document.getElementById("portfolioContent").innerHTML = `
+        ${heroHTML}
+        ${aboutHTML}
+        ${skillsHTML}
+        ${educationHTML}
+        ${experienceHTML}
+        ${certHTML}
+        ${projectHTML}
+      `;
+    });
+  </script>
 
-      <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
-
-    <script>
-       const firebaseConfig = {
-    apiKey: "AIzaSyDVXI5VvxM3bhRV9ChMBANtH0EtjGkBZMI",
-    authDomain: "ruturaj-veer.firebaseapp.com",
-    databaseURL: "https://ruturaj-veer-default-rtdb.firebaseio.com",
-    projectId: "ruturaj-veer",
-    storageBucket: "ruturaj-veer.appspot.com",
-    messagingSenderId: "168086635691",
-    appId: "1:168086635691:web:eedec947d385a3b53ae3ee"
-};
-
-
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
-
-        db.ref("siteData").once("value").then(snapshot => {
-            const data = snapshot.val();
-
-         
-            if (data.meta?.title) document.title = data.meta.title;
-
-const descTag = document.querySelector('meta[name="description"]');
-if (descTag && data.meta?.description) {
-    descTag.setAttribute('content', data.meta.description);
-}
-
-const keywordsTag = document.querySelector('meta[name="keywords"]');
-if (keywordsTag && data.meta?.keywords) {
-    keywordsTag.setAttribute('content', data.meta.keywords);
-}
-
-
-            // Profile
-            document.querySelector(".profile h1 a").textContent = data.profile.name;
-            document.querySelector(".profile img").src = "assets/img/Snapchat-1639444201-fotor-2023090212464.png";
-
-            const socialLinks = data.links.social;
-            document.querySelector(".twitter").href = socialLinks.twitter;
-            document.querySelector(".facebook").href = socialLinks.facebook;
-            document.querySelector(".instagram").href = socialLinks.instagram;
-            document.querySelector(".google-plus").href = socialLinks.github;
-            document.querySelector(".linkedin").href = socialLinks.linkedin;
-
-            // About
-            document.getElementById("location").textContent = data.profile.location;
-            document.getElementById("age").textContent = new Date().getFullYear() - parseInt(data.profile.dob.split("-")[0]);
-
-            // Skills
-            const skillHTML = data.skills.map(skill => `
-                <div class="progress">
-                    <span class="skill">${skill.name} <i class="val">${skill.level}%</i></span>
-                    <div class="progress-bar-wrap">
-                        <div class="progress-bar" role="progressbar" style="width: ${skill.level}%"></div>
-                    </div>
-                </div>
-            `).join('');
-            document.querySelector(".skills-content").innerHTML = `<div class="col-lg-12">${skillHTML}</div>`;
-
-            // Education
-            const educationHTML = data.education.map(edu => `
-                <div class="resume-item">
-                    <h4>${edu.degree}</h4>
-                    <h5>${edu.duration}</h5>
-                    <p><em>${edu.institute}</em></p>
-                    <p><em>Marks ${edu.marks}</em></p>
-                </div>
-                <br>
-            `).join('');
-            document.querySelector("#resume .col-lg-6").innerHTML += educationHTML;
-
-            // Experience
-            document.querySelector("#resume .col-lg-6:nth-child(2) .resume-item").innerHTML = `
-                <h4>${data.experience.position}</h4>
-                <h5>${data.experience.duration}</h5>
-                <p><em>${data.experience.location}</em></p>
-            `;
-
-            // Certificates
-            const certHTML = data.certificates.map(cert => `
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-wrap">
-                        <img src="${cert.img}" class="img-fluid" alt="${cert.title}">
-                        <div class="portfolio-links">
-                            <a href="${cert.img}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${cert.title}"><i class="bx bx-plus"></i></a>
-                            <a href="${data.links.portfolio}" title="More Details"><i class="bx bx-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-            document.querySelector(".portfolio-container").innerHTML = certHTML;
-
-            // Projects
-            const projectHTML = data.projects.map(proj => `
-                <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
-                    <div class="icon"><i class="bi bi-briefcase"></i></div>
-                    <h4 class="title"><a href="#">${proj.title}</a></h4>
-                    <p class="description">${proj.description.join('<br>')}</p>
-                </div>
-            `).join('');
-            document.querySelector("#projects .row").innerHTML = projectHTML;
-        });
-    </script>
-
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-<script>
-    var d = new Date();
-    var c = d.getFullYear() - 2000;
-    document.getElementById('age').textContent = c;
-
-    //location>>>>
-    const locationElement = document.getElementById('location');
-
-   
-  
-</script>
 
 </html>
